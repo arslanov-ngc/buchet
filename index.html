@@ -1,17 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-  integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="assets/styles/style.css">
-  <title>Buchet</title>
-</head>
-<body>  
-  <h3>Hello Buchet</h3>
-  <script src="assets/scripts/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <title>Buchet</title>
+  </head>
+
+  <body>
+    <div class="app">
+      <!-- navbar -->
+      <nav class="nav header">
+        <div class="header__logo">
+          <a href="/">
+            <img src="assets/images/logo.png" alt="logo" class="logo" />
+          </a>
+          <div class="header__languages">
+            <a href="#">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/4628/4628645.png"
+                alt="Ru"
+              />
+              RU
+            </a>
+            <a href="#">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/197/197416.png"
+                alt="Uz"
+              />
+              UZ
+            </a>
+          </div>
+        </div>
+        <div class="header__input">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input placeholder="Поиск" type="text" />
+          <button>Найти</button>
+        </div>
+        <div class="header__profile">
+          <i class="fa-solid fa-user"></i>
+          <a href="#">Профиль</a>
+        </div>
+      </nav>
+      <!-- promotion -->
+      <div class="promotion container">
+        <div class="scroll scroll-left" id="scroll-left">
+          <i class="fa-solid fa-chevron-left"></i>
+        </div>
+        <div class="scroll scroll-right" id="scroll-right">
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="promotion__cards" id="promotion__cards">
+          <div class="promotion__cards__wrapper" id="promotion__cards__wrapper">
+            <div class="card">
+              <a href="#">
+                <img
+                  src="https://cdn.express24.uz/i/567/385/aRFeo0S1b6SNcYtJyLSCW.jpg"
+                  alt="asda"
+                  class="card-img"
+                />
+              </a>
+            </div>
+
+            <div class="card">
+              <a href="#">
+                <img
+                  src="https://cdn.express24.uz/i/567/385/1J6ChZELuDyF96DtW2NL2.jpg"
+                  alt="asda"
+                  class="card-img"
+                />
+              </a>
+            </div>
+
+            <div class="card">
+              <a href="#">
+                <img
+                  src="https://cdn.express24.uz/i/567/385/3b-E0GznZ6i3iUxE9MtQc.jpg"
+                  alt="asda"
+                  class="card-img"
+                />
+              </a>
+            </div>
+
+            <div class="card">
+              <a href="#">
+                <img
+                  src="https://cdn.express24.uz/i/567/385/HJnzvgLmjpQ4YkjNIdznm.jpg"
+                  alt="asda"
+                  class="card-img"
+                />
+              </a>
+            </div>
+
+            <div class="card">
+              <a href="#">
+                <img
+                  src="https://cdn.express24.uz/i/567/385/AUGq9BpDdV_4l0VKKqsFY.jpg"
+                  alt="asda"
+                  class="card-img"
+                />
+              </a>
+            </div>
+
+            <div class="card">
+              <a href="#">
+                <img
+                  src="https://cdn.express24.uz/i/567/385/GLa-sLmL5ZLixwP8gLQrH.jpg"
+                  alt="asda"
+                  class="card-img"
+                />
+              </a>
+            </div>
+            <div class="card">
+              <a href="#">
+                <img
+                  src="https://cdn.express24.uz/i/567/385/aKxO7RgSvYBJOXnEpNbyv.jpg"
+                  alt="asda"
+                  class="card-img"
+                />
+              </a>
+            </div>
+
+            <div class="card">
+              <a href="#">
+                <img
+                  src="https://cdn.express24.uz/i/567/385/tCQC2WZnp3kIxQl_LSUiE.jpg"
+                  alt="asda"
+                  class="card-img"
+                />
+              </a>
+            </div>
+
+            <div class="card">
+              <a href="#">
+                <img
+                  src="https://cdn.express24.uz/i/567/385/AYpapohM1qSGrv5ud_bZv.jpg"
+                  alt="asda"
+                  class="card-img"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/scripts/main.js"></script>
+  </body>
 </html>
