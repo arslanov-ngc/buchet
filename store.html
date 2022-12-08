@@ -1,117 +1,474 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-  integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="assets/styles/style.css">
-  <title>Buchet</title>
-</head>
-<body>  
-  <div class="app">
-    <!--Navbar-->
-    <nav class="nav header">
-      <div class="header__logo">
-        <a href="/">
-          <img src="assets/images/logo.png" alt="logo" class="logo" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <title>store__background</title>
+  </head>
+  <body>
+    <div class="app">
+      <!--Navbar-->
+      <nav class="nav header">
+        <div class="header__logo">
+          <a href="/">
+            <img src="assets/images/logo.png" alt="logo" class="logo" />
+          </a>
+          <div class="header__languages">
+            <a href="#">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/4628/4628645.png"
+                alt="Ru"
+              />
+              RU
+            </a>
+            <a href="#">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/197/197416.png"
+                alt="Uz"
+              />
+              UZ
+            </a>
+          </div>
+        </div>
+        <div class="header__input">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input placeholder="Поиск" type="text" />
+          <button>Найти</button>
+        </div>
+        <div class="header__profile">
+          <i class="fa-solid fa-user"></i>
+          <a href="#">Профиль</a>
+        </div>
+      </nav>
+
+      <!-- Store -->
+
+      <div class="store container">
+        <a href="./index.html" class="store__backBtn">
+          <i class="fa-solid fa-angle-left"></i> Назад
         </a>
-        <div class="header__languages">
-          <a href="#">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/4628/4628645.png"
-              alt="Ru"
-            />
-            RU
-          </a>
-          <a href="#">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/197/197416.png"
-              alt="Uz"
-            />
-            UZ
-          </a>
+        <div
+          class="store__header"
+          style="
+            background-image: url(https://media.express24.uz/r/1500/900/Ng4oinQQaN4hO_56KaRaO.jpg);
+          "
+        >
+          <div class="store__background">
+            <div class="store__content">
+              <h1>The Loaf</h1>
+              <div class="store__info">
+                <div class="info rounded">
+                  <i class="fa-regular fa-star"></i> 4.8
+                </div>
+                <div class="info rounded">Время доставки · 37 - 67 мин</div>
+                <div class="info rounded">Доставка · 20,200 сум</div>
+                <div class="info circle">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+                <div class="info circle">
+                  <span class="circle__opener" id="circle__opener">
+                    <i class="fa-solid fa-info"></i>
+                  </span>
+                  <span class="info__store deactive" id="info__store">
+                    <div>
+                      <h3>The Loaf</h3>
+                      <p>Режим работы: 10:00 - 23:59</p>
+                    </div>
+                    <div>
+                      <h6>
+                        Магазин импортных товаров. У нас имеется большое
+                        количество всевозможных рамёнов, корейских снэков,
+                        разновидности кофе, большой выбор напитков и
+                        энергетиков, сухофруктов и орешков, мармеладок, шоколада
+                        и многое другое.
+                      </h6>
+                    </div>
+                    <span
+                      >Мороженое · Продукты · Популярные · Детское питание</span
+                    >
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          type="button"
+          class="storeBtn storeBtn__green contact__modal__opener"
+        >
+          <i class="fa-solid fa-users"></i> Совместный заказ
+        </button>
+        <div class="store__input">
+          <i class="fa-solid fa-search"></i>
+          <input type="text" placeholder="Поиск по заведению" />
+        </div>
+        <div class="storeProducts">
+          <div class="storeProducts__tags">
+            <button
+              type="button"
+              class="storeBtn storeBtn__lightYellow storeBtn__active"
+            >
+              Горячие цены!
+            </button>
+            <button
+              type="button"
+              class="storeBtn storeBtn__lightYellow storeBtn__deactive"
+            >
+              Новый год
+            </button>
+            <button
+              type="button"
+              class="storeBtn storeBtn__lightYellow storeBtn__deactive"
+            >
+              Сладости
+            </button>
+            <button
+              type="button"
+              class="storeBtn storeBtn__lightYellow storeBtn__deactive"
+            >
+              Шоколад
+            </button>
+            <button
+              type="button"
+              class="storeBtn storeBtn__lightYellow storeBtn__deactive"
+            >
+              Мармелад и маршмеллоу
+            </button>
+            <button
+              type="button"
+              class="storeBtn storeBtn__lightYellow storeBtn__deactive"
+            >
+              Мороженое
+            </button>
+          </div>
+          <div class="storeProducts__products products">
+            <h3>Горячие цены!</h3>
+            <div class="products__wrapper">
+              <div class="product product__modal__opener">
+                <div>
+                  <img
+                    src="https://cdn.express24.uz/i/600/600/Z6RqdhTvmyj5zLJPUHYRe.jpg"
+                    alt="product"
+                  />
+                  <h5>Red Bull 0,35л.</h5>
+                </div>
+                <button type="button" class="storeBtn storeBtn__gray">
+                  23,000 сум
+                </button>
+              </div>
+              <div class="product product__modal__opener">
+                <div>
+                  <img
+                    src="https://cdn.express24.uz/i/600/600/Z6RqdhTvmyj5zLJPUHYRe.jpg"
+                    alt="product"
+                  />
+                  <h5>Red Bull 0,25л.</h5>
+                </div>
+                <button type="button" class="storeBtn storeBtn__gray">
+                  16,000 сум
+                </button>
+              </div>
+              <div class="product product__modal__opener">
+                <div>
+                  <img
+                    src="https://cdn.express24.uz/i/600/600/Z6RqdhTvmyj5zLJPUHYRe.jpg"
+                    alt="product"
+                  />
+                  <h5>Агуша фрукт. пюре груша 90гр (дойпак)</h5>
+                </div>
+                <button type="button" class="storeBtn storeBtn__gray">
+                  11,000 сум
+                </button>
+              </div>
+              <div class="product product__modal__opener">
+                <div>
+                  <img
+                    src="https://cdn.express24.uz/i/600/600/Z6RqdhTvmyj5zLJPUHYRe.jpg"
+                    alt="product"
+                  />
+                  <h5>Энергетический напиток Monster...</h5>
+                </div>
+                <button type="button" class="storeBtn storeBtn__gray">
+                  30,000 сум
+                </button>
+              </div>
+              <div class="product product__modal__opener">
+                <div>
+                  <img
+                    src="https://cdn.express24.uz/i/600/600/Z6RqdhTvmyj5zLJPUHYRe.jpg"
+                    alt="product"
+                  />
+                  <h5>Чипсы Pringles Sour cream & onion 165г</h5>
+                </div>
+                <button type="button" class="storeBtn storeBtn__gray">
+                  42,000 сум
+                </button>
+              </div>
+              <div class="product notAvailable product__modal__opener">
+                <div>
+                  <img
+                    src="https://cdn.express24.uz/i/600/600/Z6RqdhTvmyj5zLJPUHYRe.jpg"
+                    alt="product"
+                  />
+                  <h5>Агуша фрукт. пюре банан 90гр (дойпак)</h5>
+                </div>
+                <button type="button" class="storeBtn storeBtn__gray">
+                  1,000 сум
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="storeProducts__products products">
+            <h3>Новый год</h3>
+            <div class="products__wrapper">
+              <div class="product product__modal__opener">
+                <div>
+                  <img
+                    src="https://cdn.express24.uz/i/600/600/Z6RqdhTvmyj5zLJPUHYRe.jpg"
+                    alt="product"
+                  />
+                  <h5>Red Bull 0,35л.</h5>
+                </div>
+                <button type="button" class="storeBtn storeBtn__gray">
+                  23,000 сум
+                </button>
+              </div>
+              <div class="product product__modal__opener">
+                <div>
+                  <img
+                    src="https://cdn.express24.uz/i/600/600/Z6RqdhTvmyj5zLJPUHYRe.jpg"
+                    alt="product"
+                  />
+                  <h5>Red Bull 0,25л.</h5>
+                </div>
+                <button type="button" class="storeBtn storeBtn__gray">
+                  16,000 сум
+                </button>
+              </div>
+              <div class="product product__modal__opener">
+                <div>
+                  <img
+                    src="https://cdn.express24.uz/i/600/600/Z6RqdhTvmyj5zLJPUHYRe.jpg"
+                    alt="product"
+                  />
+                  <h5>Агуша фрукт. пюре груша 90гр (дойпак)</h5>
+                </div>
+                <button type="button" class="storeBtn storeBtn__gray">
+                  11,000 сум
+                </button>
+              </div>
+              <div class="product product__modal__opener">
+                <div>
+                  <img
+                    src="https://cdn.express24.uz/i/600/600/Z6RqdhTvmyj5zLJPUHYRe.jpg"
+                    alt="product"
+                  />
+                  <h5>Энергетический напиток Monster...</h5>
+                </div>
+                <button type="button" class="storeBtn storeBtn__gray">
+                  30,000 сум
+                </button>
+              </div>
+              <div class="product product__modal__opener">
+                <div>
+                  <img
+                    src="https://cdn.express24.uz/i/600/600/Z6RqdhTvmyj5zLJPUHYRe.jpg"
+                    alt="product"
+                  />
+                  <h5>Чипсы Pringles Sour cream & onion 165г</h5>
+                </div>
+                <button type="button" class="storeBtn storeBtn__gray">
+                  42,000 сум
+                </button>
+              </div>
+              <div class="product notAvailable product__modal__opener">
+                <div>
+                  <img
+                    src="https://cdn.express24.uz/i/600/600/Z6RqdhTvmyj5zLJPUHYRe.jpg"
+                    alt="product"
+                  />
+                  <h5>Агуша фрукт. пюре банан 90гр (дойпак)</h5>
+                </div>
+                <button type="button" class="storeBtn storeBtn__gray">
+                  1,000 сум
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="storeProducts__products products">
+            <h3>Сладости</h3>
+            <div class="products__wrapper">
+              <div class="product product__modal__opener">
+                <div>
+                  <img
+                    src="https://cdn.express24.uz/i/600/600/Z6RqdhTvmyj5zLJPUHYRe.jpg"
+                    alt="product"
+                  />
+                  <h5>Red Bull 0,35л.</h5>
+                </div>
+                <button type="button" class="storeBtn storeBtn__gray">
+                  23,000 сум
+                </button>
+              </div>
+              <div class="product product__modal__opener">
+                <div>
+                  <img
+                    src="https://cdn.express24.uz/i/600/600/Z6RqdhTvmyj5zLJPUHYRe.jpg"
+                    alt="product"
+                  />
+                  <h5>Red Bull 0,25л.</h5>
+                </div>
+                <button type="button" class="storeBtn storeBtn__gray">
+                  16,000 сум
+                </button>
+              </div>
+              <div class="product product__modal__opener">
+                <div>
+                  <img
+                    src="https://cdn.express24.uz/i/600/600/Z6RqdhTvmyj5zLJPUHYRe.jpg"
+                    alt="product"
+                  />
+                  <h5>Агуша фрукт. пюре груша 90гр (дойпак)</h5>
+                </div>
+                <button type="button" class="storeBtn storeBtn__gray">
+                  11,000 сум
+                </button>
+              </div>
+              <div class="product product__modal__opener">
+                <div>
+                  <img
+                    src="https://cdn.express24.uz/i/600/600/Z6RqdhTvmyj5zLJPUHYRe.jpg"
+                    alt="product"
+                  />
+                  <h5>Энергетический напиток Monster...</h5>
+                </div>
+                <button type="button" class="storeBtn storeBtn__gray">
+                  30,000 сум
+                </button>
+              </div>
+              <div class="product product__modal__opener">
+                <div>
+                  <img
+                    src="https://cdn.express24.uz/i/600/600/Z6RqdhTvmyj5zLJPUHYRe.jpg"
+                    alt="product"
+                  />
+                  <h5>Чипсы Pringles Sour cream & onion 165г</h5>
+                </div>
+                <button type="button" class="storeBtn storeBtn__gray">
+                  42,000 сум
+                </button>
+              </div>
+              <div class="product notAvailable product__modal__opener">
+                <div>
+                  <img
+                    src="https://cdn.express24.uz/i/600/600/Z6RqdhTvmyj5zLJPUHYRe.jpg"
+                    alt="product"
+                  />
+                  <h5>Агуша фрукт. пюре банан 90гр (дойпак)</h5>
+                </div>
+                <button type="button" class="storeBtn storeBtn__gray">
+                  1,000 сум
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="header__input">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input placeholder="Поиск" type="text" />
-        <button>Найти</button>
+
+      <!-- Store end -->
+
+      <!-- footer -->
+
+      <footer>
+        <div class="footer-nav">
+          <a href="#">О нас</a>
+          <a href="#">Контакты</a>
+          <a href="#">Пользовательское соглашение</a>
+        </div>
+
+        <div class="footer-bottom d-flex align-items-center">
+          <p>Служба поддержки: +998 71 200 40 01</p>
+          <p>Ⓒ 2022 BucheT.uz</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- contact modal -->
+
+    <div class="contactModal deactive">
+      <div class="contactModal__wrapper">
+        <span class="contactModal__close">
+          <i class="fa-solid fa-times"></i>
+        </span>
+        <div class="contactModal__header">
+          <h3>Введите номер телефона</h3>
+          <p>и получите код подтверждения</p>
+        </div>
+        <div class="contactModal__content">
+          <input type="text" placeholder="Номер телефона" />
+        </div>
+        <div class="contactModal__footer">
+          <p>
+            Нажимая кнопку получить код вы принимаете условия
+            <br />
+            <a href="#">пользовательского соглашения</a>
+          </p>
+          <button type="button" class="storeBtn storeBtn__yellow">
+            Продолжить
+          </button>
+        </div>
       </div>
-      <div class="header__profile">
-        <i class="fa-solid fa-user"></i>
-        <a href="#">Профиль</a>
-      </div>
-    </nav>
-    
-    <div class="store container">
-      <a href="/" class="store__backBtn">
-        <i class="fa-solid fa-angle-left"></i> Назад
-      </a>
-      <div class="store__header" style="background-image: url('https://media.express24.uz/r/1500/900/upload/iblock/658/65810486188a9eea6b69f574ee8966a8.jpg');">
-        <div class="store__background">
-          <div class="store__content">
-            <h1>Street77</h1>
-            <div class="store__info">
-              <div class="info rounded">
-                  <i class="fa-regular fa-star"></i> 5
-              </div>
-              <div class="info rounded">
-                Время доставки · 20 - 30 мин
-              </div>
-              <div class="info rounded">Доставка · 23.000 сум</div>
-              <!-- <div class="info circle"> -->
-                <!-- <i class="fa-regular fa-heart"></i>
-              </div> -->
-              <!-- <div class="info circle">
-                <span
-                    class="circle__opener">
-                  <i class="fa-solid fa-info"></i>
-                </span>
-                <span
-                  class='info__store active'
-                >
-                  <div>
-                    <h3>{title}</h3>
-                    <p>
-                      Режим работы: {start} - {end}
-                    </p>
-                  </div>
-                  <div>
-                    <h6></h6>
-                  </div>
-                  <span>{tags}</span>
-                </span> -->
-              <!-- </div> -->
+    </div>
+
+    <!-- product modal -->
+
+    <div class="productModal deactive">
+      <div class="productModal__wrapper">
+        <span class="productModal__close">
+          <i class="fa-solid fa-times"></i>
+        </span>
+        <div class="productModal__header">
+          <img
+            src="https://cdn.express24.uz/i/600/600/Z6RqdhTvmyj5zLJPUHYRe.jpg"
+            title="img"
+          />
+        </div>
+        <div class="productModal__content">
+          <h3>Red Bull 0,35л.</h3>
+          <p>Энергетик Red Bull Original</p>
+        </div>
+        <div class="productModal__footer">
+          <h6>23,000 сум</h6>
+          <div class="btnGroup">
+            <div>
+              <button type="button">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+              <span>1</span>
+              <button type="button">
+                <i class="fa-solid fa-plus"></i>
+              </button>
             </div>
+            <button
+              type="button"
+              class="storeBtn storeBtn__yellow contact__modal__opener"
+            >
+              Добавить
+            </button>
           </div>
         </div>
       </div>
     </div>
 
-
-
-
-
-    <!-- footer -->
-
-      <footer>
-            <div class="footer-nav">
-                <a href="#">О нас</a>
-                <a href="#">Контакты</a>
-                <a href="#">Пользовательское соглашение</a>
-            </div>
-
-            <div class="footer-bottom d-flex align-items-center">
-                <p>Служба поддержки: +998 71 200 40 01</p>
-                <p>
-                    Ⓒ 2022 BucheT.uz
-                </p>
-            </div>
-        </footer>
-  </div>
-  <script src="assets/scripts/main.js"></script>
-</body>
+    <script src="assets/scripts/store.js"></script>
+  </body>
 </html>

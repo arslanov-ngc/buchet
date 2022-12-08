@@ -1,4 +1,6 @@
 window.addEventListener("DOMContentLoaded", () => {
+  //  slider
+
   const promotionsParent = document.querySelector("#promotion__cards__wrapper"),
     promotions = promotionsParent.querySelectorAll(".card"),
     promotionsWidth = getComputedStyle(promotions[0]).width,
