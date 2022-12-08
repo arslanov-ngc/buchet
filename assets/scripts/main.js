@@ -78,4 +78,28 @@ window.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // contact modal
+
+  const contactModal = document.querySelector(".contactModal"),
+    contactModalOpener = document.querySelectorAll(".contact__modal__opener"),
+    contactModalClose = document.querySelector(".contactModal__close");
+
+  contactModalOpener.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      contactModal.classList.replace("deactive", "active");
+      document.body.style.overflowY = "hidden";
+    });
+  });
+  contactModalClose.addEventListener("click", () => {
+    contactModal.classList.replace("active", "deactive");
+    document.body.style.overflowY = "visible";
+  });
+
+  contactModal.addEventListener("click", (e) => {
+    if (e.target === contactModal) {
+      contactModal.classList.replace("active", "deactive");
+      document.body.style.overflowY = "visible";
+    }
+  });
 });

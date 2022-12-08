@@ -267,7 +267,7 @@ a {
      object-fit: cover;
 }
 .shop__cards__wrapper .text {
-  padding: 2px 10px;
+  padding: 0.8rem 1rem;
 }
 .shop__cards__wrapper .text h4 {
   margin: 0;
@@ -280,9 +280,10 @@ a {
   margin-bottom: -10px;
 }
 .shop__cards__wrapper .text p {
-  font-size: 14px;
-  color: #343434;
+  font-size: 12px;
+  color: #5a5a5a;
   font-weight: 600;
+  margin-top: 10px;
 }
 
 .restaurants {
