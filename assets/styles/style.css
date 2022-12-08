@@ -37,9 +37,14 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+button {
+  cursor: pointer;
+}
+
 .container {
-  max-width: 1350px;
+  max-width: 1310px;
   padding: 0px 2rem;
+  margin: 0 auto;
 }
 
 .logo {
@@ -64,7 +69,7 @@ body {
 .header__logo .logo {
   -o-object-fit: cover;
      object-fit: cover;
-  height: 50px;
+  height: 3rem;
   margin-right: 40px;
 }
 .header__languages {
@@ -84,8 +89,8 @@ body {
   gap: 5px;
 }
 .header__languages a img {
-  width: 30px;
-  height: 30px;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 .header__input {
   width: 38%;
@@ -145,7 +150,7 @@ body {
   position: relative;
 }
 .promotion i {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #1a1a18;
   padding: 4px;
 }
@@ -167,17 +172,18 @@ body {
   right: -20px;
 }
 .promotion__cards {
-  overflow-x: scroll;
+  overflow-x: hidden;
 }
 .promotion__cards__wrapper {
   display: flex;
   margin: 10px auto;
+  transition: all 0.3s linear;
 }
 .promotion__cards .card {
-  box-shadow: 0 0 10px #dddddd;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.22);
   overflow: hidden;
-  border-radius: 10px;
-  border: 0;
+  border-radius: 15px;
+  border: none;
   cursor: pointer;
   width: 100%;
   min-width: 220px;
@@ -189,13 +195,13 @@ body {
 .promotion__cards .card img {
   width: 100%;
   border-radius: 10px 10px 0 0;
-  height: 152px;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .shop {
-  margin-top: 50px;
+  margin-top: 0px;
   position: relative;
 }
 .shop .title {
@@ -204,7 +210,7 @@ body {
   font-weight: 700;
 }
 .shop i {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #1a1a18;
   padding: 4px;
 }
@@ -227,44 +233,51 @@ body {
 }
 .shop__cards {
   overflow-x: scroll;
-  display: inline-flex;
+}
+.shop__cards__wrapper {
+  display: flex;
   margin: 10px auto;
+  transition: all 0.3s linear;
 }
-.shop__cards .card {
-  overflow: hidden;
-  border-radius: 10px;
-  border: 0;
-  width: 100%;
-  max-width: 250px;
-  margin: 10px;
+.shop__cards__wrapper .card {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.22);
+  border-radius: 15px;
+  border: none;
   cursor: pointer;
+  width: 100%;
+  min-width: 250px;
+  margin: 10px;
 }
-.shop__cards .card a {
+.shop__cards__wrapper .card a {
   text-decoration: none;
 }
-.shop__cards .card img {
+.shop__cards__wrapper .card img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 20px 20px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.shop__cards .card .text {
-  padding: 2px 0px;
+.shop__cards__wrapper .text {
+  padding: 2px 10px;
 }
-.shop__cards .card .text h4 {
+.shop__cards__wrapper .text h4 {
   margin: 0;
-  font-size: 1rem;
+  font-size: calc(1rem + 4px);
   color: #1a1a18;
-  font-weight: 400;
+  font-weight: 500;
   padding: 5px 0;
   overflow: hidden;
   width: 500px;
-  margin-bottom: -4px;
+  margin-bottom: -10px;
 }
-.shop__cards .card .text p {
-  font-size: 13px;
+.shop__cards__wrapper .text p {
+  font-size: 14px;
   color: #343434;
+  font-weight: 600;
 }
 
 .restaurants {
+  margin: 0 auto;
   margin-top: 25px;
 }
 .restaurants__title {
@@ -339,6 +352,7 @@ footer .footer-bottom {
 
 .store {
   position: relative;
+  margin: 0 auto;
   margin-top: 8rem;
 }
 .store__backBtn {
@@ -351,9 +365,11 @@ footer .footer-bottom {
 .store__header {
   position: relative;
   background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
-  height: auto;
-  min-height: 28rem;
+  height: 100%;
+  min-height: 25rem;
   padding: 5rem 2rem;
   border-radius: 1.5rem;
   margin-top: 2rem;

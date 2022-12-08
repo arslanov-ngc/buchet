@@ -8,10 +8,110 @@
   integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
   crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="assets/styles/style.css">
-  <title>Buchet Store</title>
+  <title>Buchet</title>
 </head>
 <body>  
-  
+  <div class="app">
+    <!--Navbar-->
+    <nav class="nav header">
+      <div class="header__logo">
+        <a href="/">
+          <img src="assets/images/logo.png" alt="logo" class="logo" />
+        </a>
+        <div class="header__languages">
+          <a href="#">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/4628/4628645.png"
+              alt="Ru"
+            />
+            RU
+          </a>
+          <a href="#">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/197/197416.png"
+              alt="Uz"
+            />
+            UZ
+          </a>
+        </div>
+      </div>
+      <div class="header__input">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input placeholder="Поиск" type="text" />
+        <button>Найти</button>
+      </div>
+      <div class="header__profile">
+        <i class="fa-solid fa-user"></i>
+        <a href="#">Профиль</a>
+      </div>
+    </nav>
+    
+    <div class="store container">
+      <a href="/" class="store__backBtn">
+        <i class="fa-solid fa-angle-left"></i> Назад
+      </a>
+      <div class="store__header" style="background-image: url('https://media.express24.uz/r/1500/900/upload/iblock/658/65810486188a9eea6b69f574ee8966a8.jpg');">
+        <div class="store__background">
+          <div class="store__content">
+            <h1>Street77</h1>
+            <div class="store__info">
+              <div class="info rounded">
+                  <i class="fa-regular fa-star"></i> 5
+              </div>
+              <div class="info rounded">
+                Время доставки · 20 - 30 мин
+              </div>
+              <div class="info rounded">Доставка · 23.000 сум</div>
+              <!-- <div class="info circle"> -->
+                <!-- <i class="fa-regular fa-heart"></i>
+              </div> -->
+              <!-- <div class="info circle">
+                <span
+                    class="circle__opener">
+                  <i class="fa-solid fa-info"></i>
+                </span>
+                <span
+                  class='info__store active'
+                >
+                  <div>
+                    <h3>{title}</h3>
+                    <p>
+                      Режим работы: {start} - {end}
+                    </p>
+                  </div>
+                  <div>
+                    <h6></h6>
+                  </div>
+                  <span>{tags}</span>
+                </span> -->
+              <!-- </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- footer -->
+
+      <footer>
+            <div class="footer-nav">
+                <a href="#">О нас</a>
+                <a href="#">Контакты</a>
+                <a href="#">Пользовательское соглашение</a>
+            </div>
+
+            <div class="footer-bottom d-flex align-items-center">
+                <p>Служба поддержки: +998 71 200 40 01</p>
+                <p>
+                    Ⓒ 2022 BucheT.uz
+                </p>
+            </div>
+        </footer>
+  </div>
   <script src="assets/scripts/main.js"></script>
 </body>
 </html>
