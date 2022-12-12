@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <title>Buchet</title>
+  </head>
+
+  <body>
+    <div class="app">
+      <!-- Navbar -->
+      <nav class="nav header header--checkout">
+        <div class="header__logo">
+          <a href="/">
+            <img src="assets/images/logo.png" alt="logo" class="logo" />
+          </a>
+        </div>
+      </nav>
+
+      <div class="checkout container">
+        <a href="./store.html" class="backBtn">
+          <i class="fa-solid fa-angle-left"></i> Магазин
+        </a>
+        <h3 class="checkout__title">The Loaf</h3>
+        <div class="checkout__content">
+          <div class="content">
+            <div class="content__wrapper">
+              <h5 class="content__title">Адрес доставки</h5>
+              <div class="content__select">
+                <select>
+                  <option value="Mirabad">
+                    Мирабад район, Амира Темура проспект
+                  </option>
+                </select>
+              </div>
+              <div class="content__inputGroup">
+                <div class="content__input">
+                  <label>Подьезд</label>
+                  <input type="text" />
+                </div>
+                <div class="content__input">
+                  <label>Этаж</label>
+                  <input type="text" />
+                </div>
+                <div class="content__input">
+                  <label>Квартира</label>
+                  <input type="text" />
+                </div>
+              </div>
+              <div class="content__input">
+                <label>Ориентир (код домофона)</label>
+                <input type="text" />
+              </div>
+              <div class="content__input">
+                <label>Комментарий к заказу</label>
+                <input type="text" />
+              </div>
+            </div>
+          </div>
+          <div class="content content--fixed"></div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+
+      <footer>
+        <div class="footer-nav">
+          <a href="#">О нас</a>
+          <a href="#">Контакты</a>
+          <a href="#">Пользовательское соглашение</a>
+        </div>
+
+        <div class="footer-bottom d-flex align-items-center">
+          <p>Служба поддержки: +998 71 200 40 01</p>
+          <p>Ⓒ 2022 BucheT.uz</p>
+        </div>
+      </footer>
+
+      <!-- Footer End-->
+    </div>
+    <script src="assets/scripts/checkout.js"></script>
+  </body>
+</html>

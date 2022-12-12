@@ -19,10 +19,10 @@ $font-size-xl: 2rem;
   font-size: 14px;
   outline: none;
   border: none;
-  padding: 5px 12px;
+  padding: 8px 16px;
   color: $color;
   background: $bg;
-  border-radius: 12px;
+  border-radius: 0.6rem;
   cursor: pointer;
 
   &:hover {
@@ -159,7 +159,8 @@ a {
     }
   }
 
-  &__profile {
+  &__profile,
+  &__cart {
     display: flex;
     align-items: center;
 
@@ -174,6 +175,10 @@ a {
       margin-right: 10px;
     }
   }
+}
+.header--checkout {
+  justify-content: flex-start;
+  padding-left: 2rem;
 }
 
 .promotion {
@@ -400,14 +405,6 @@ footer {
   width: 100%;
   margin: 0 auto;
   margin-top: 8rem;
-
-  &__backBtn {
-    width: 100%;
-    color: gray;
-    &:hover {
-      color: rgb(107, 107, 107);
-    }
-  }
   &__header {
     position: relative;
     object-fit: cover;
@@ -543,6 +540,14 @@ footer {
       margin-left: 5px;
       width: 100%;
     }
+  }
+}
+
+.backBtn {
+  width: 100%;
+  color: gray;
+  &:hover {
+    color: rgb(107, 107, 107);
   }
 }
 
@@ -686,6 +691,17 @@ footer {
   }
   p {
     color: #555;
+  }
+  a {
+    background-color: #24ad5d;
+    margin-top: 1rem;
+    padding: 0.6rem 1rem;
+    border-radius: 0.3rem;
+    color: #fff;
+    transition: 0.2s ease;
+    &:hover {
+      background-color: #249754;
+    }
   }
 }
 
@@ -960,6 +976,10 @@ footer {
   display: flex;
 }
 
+.checkout {
+  margin-top: 8rem;
+}
+
 @media (max-width: 820px) {
   ::-webkit-scrollbar {
     height: 0.1px;
@@ -1000,7 +1020,8 @@ footer {
     }
 
     &__address,
-    &__profile {
+    &__profile,
+    &__cart {
       display: none;
     }
   }
