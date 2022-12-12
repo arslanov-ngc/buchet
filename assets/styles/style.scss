@@ -570,7 +570,7 @@ footer {
     background-color: #ffec00;
     color: #000;
     &:hover {
-      background-color: #ddce00;
+      background-color: #f0e002;
     }
   }
   &__lightYellow {
@@ -977,7 +977,262 @@ footer {
 }
 
 .checkout {
+  padding-left: 5rem;
+  padding-right: 5rem;
   margin-top: 8rem;
+  &__title {
+    font-size: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  &__content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 55% auto;
+    gap: 5rem;
+    .content {
+      position: relative;
+      &__wrapper {
+        border: 1px solid #ddd;
+        border-radius: 1.4rem;
+        padding: 2rem;
+        &--marginTop {
+          margin-top: 2rem;
+        }
+        &--fixed {
+          position: sticky;
+          top: calc(0% + 8rem);
+          width: 100%;
+        }
+      }
+      &__title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+      }
+      &__select {
+        width: 100%;
+        height: 100%;
+        min-height: 3rem;
+        background-color: rgb(238, 241, 241);
+        border-radius: 0.8rem;
+        display: flex;
+        justify-content: flex-start;
+        padding: 0 1rem;
+        color: #888;
+        &:hover {
+          background-color: rgb(224, 229, 231);
+        }
+        i {
+          margin: auto;
+        }
+        select {
+          width: 100%;
+          color: #444;
+          border: none;
+          outline: none;
+          background-color: transparent;
+          padding-left: 0.4rem;
+          font-size: 1rem;
+          cursor: pointer;
+          option {
+            background-color: #eee;
+          }
+        }
+      }
+      &__group {
+        width: 100%;
+        display: grid;
+        gap: 0.5rem;
+        &--3x {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+        &--2x {
+          grid-template-columns: 1fr 1fr;
+        }
+        &--items {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #111;
+            p {
+              width: 70%;
+            }
+            span,
+            sub {
+              display: block;
+            }
+            sub {
+              text-align: right;
+              color: #888;
+              font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+                "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            }
+          }
+        }
+        &--flex {
+          margin-top: 2rem;
+          display: flex;
+          flex-direction: column;
+          .flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h2 {
+              font-weight: 500;
+            }
+          }
+        }
+      }
+      &__input {
+        position: relative;
+        width: 100%;
+        border: 1px solid #ddd;
+        border-radius: 0.5rem;
+        margin-top: 1rem;
+        height: 3rem;
+        color: #999;
+        padding-left: 5px;
+        padding-right: 5px;
+        label {
+          position: absolute;
+          background-color: #fff;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 0.5rem;
+          padding-left: 5px;
+          padding-right: 5px;
+          font-size: 0.9rem;
+          pointer-events: none;
+          transition: 0.2s ease-in-out;
+        }
+        input {
+          border-radius: 0.5rem;
+          width: 100%;
+          height: auto;
+          min-height: 100%;
+          border: none;
+          outline: none;
+          font-size: 1rem;
+          color: #555;
+          caret-color: #16c647;
+          &:focus ~ label {
+            top: 0%;
+            font-size: 0.7rem;
+          }
+        }
+        input.isActive ~ label {
+          top: 0%;
+          font-size: 0.7rem;
+        }
+      }
+      &__promocode {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        position: relative;
+        border: 1px solid #ddd;
+        border-radius: 0.8rem;
+        display: grid;
+        min-height: 3rem;
+        grid-template-columns: 70% auto;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        span {
+          position: absolute;
+          top: 55%;
+          transform: translateY(-50%);
+          left: 0.5rem;
+        }
+        input {
+          padding-left: 1rem;
+          border-radius: 0.5rem;
+          border: none;
+          outline: none;
+          font-size: 0.9rem;
+          color: #555;
+          caret-color: #16c647;
+        }
+        button {
+          padding: 0 1.2rem;
+          height: 70%;
+          margin: auto;
+        }
+        button.disabled {
+          background-color: rgb(238, 241, 241);
+          pointer-events: none;
+        }
+      }
+      &__btn {
+        display: block;
+        width: 95%;
+        margin-top: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      &__featuredProducts {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+        .featuredProduct {
+          width: 100%;
+          border-radius: 0.8rem;
+          background-color: #f3f3f3;
+          padding: 10px;
+          display: flex;
+          flex-direction: column;
+          gap: 3rem;
+          width: auto;
+          max-width: 200px;
+          text-align: center;
+
+          div {
+            width: 100%;
+            height: 100%;
+          }
+          img {
+            width: 100%;
+            border-radius: 0.5rem;
+          }
+          h5 {
+            font-size: 0.9rem;
+            color: #333;
+            margin-top: 1rem;
+          }
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        .featuredProduct.notAvailable {
+          position: relative;
+          opacity: 0.8;
+          background-color: rgba(201, 201, 201, 0.24);
+          pointer-events: none;
+          user-select: none;
+          &::after {
+            position: absolute;
+            content: "Недоступно";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 1.2rem;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 10%;
+            border-radius: 0.2rem;
+            background-color: rgb(177, 177, 177);
+            backdrop-filter: blur(1px);
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 820px) {

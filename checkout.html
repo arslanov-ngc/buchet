@@ -1,92 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="assets/styles/style.css" />
-    <title>Buchet</title>
-  </head>
 
-  <body>
-    <div class="app">
-      <!-- Navbar -->
-      <nav class="nav header header--checkout">
-        <div class="header__logo">
-          <a href="/">
-            <img src="assets/images/logo.png" alt="logo" class="logo" />
-          </a>
-        </div>
-      </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/styles/style.css" />
+  <title>Buchet</title>
+</head>
 
-      <div class="checkout container">
-        <a href="./store.html" class="backBtn">
-          <i class="fa-solid fa-angle-left"></i> Магазин
+<body>
+  <div class="app">
+    <!-- Navbar -->
+    <nav class="nav header header--checkout">
+      <div class="header__logo">
+        <a href="/">
+          <img src="assets/images/logo.png" alt="logo" class="logo" />
         </a>
-        <h3 class="checkout__title">The Loaf</h3>
-        <div class="checkout__content">
-          <div class="content">
-            <div class="content__wrapper">
-              <h5 class="content__title">Адрес доставки</h5>
+      </div>
+    </nav>
+
+    <div class="checkout container">
+      <a href="./store.html" class="backBtn">
+        <i class="fa-solid fa-angle-left"></i> Магазин
+      </a>
+      <h3 class="checkout__title">The Loaf</h3>
+      <div class="checkout__content">
+        <div class="content">
+          <div class="content__wrapper">
+            <h5 class="content__title">Адрес доставки</h5>
+            <div class="content__select">
+              <i class="fa-solid fa-location-dot"></i>
+              <select>
+                <option value="Mirabad" selected>
+                  Мирабад район, Амира Темура проспект
+                </option>
+                <option value="Add">Добавить</option>
+              </select>
+            </div>
+            <div class="content__group content__group--3x">
+              <div class="content__input">
+                <input type="text" />
+                <label>Подьезд</label>
+              </div>
+              <div class="content__input">
+                <input type="text" />
+                <label>Этаж</label>
+              </div>
+              <div class="content__input">
+                <input type="text" />
+                <label>Квартира</label>
+              </div>
+            </div>
+            <div class="content__input">
+              <input type="text" />
+              <label>Ориентир (код домофона)</label>
+            </div>
+            <div class="content__input">
+              <input type="text" />
+              <label>Комментарий к заказу</label>
+            </div>
+          </div>
+          <div class="content__wrapper content__wrapper--marginTop">
+            <h5 class="content__title">Время доставки</h5>
+            <div class="content__group content__group--2x">
               <div class="content__select">
                 <select>
-                  <option value="Mirabad">
-                    Мирабад район, Амира Темура проспект
-                  </option>
+                  <option value="today" selected>Сегодня</option>
+                  <option value="tomorrow">Завтра</option>
                 </select>
               </div>
-              <div class="content__inputGroup">
-                <div class="content__input">
-                  <label>Подьезд</label>
-                  <input type="text" />
-                </div>
-                <div class="content__input">
-                  <label>Этаж</label>
-                  <input type="text" />
-                </div>
-                <div class="content__input">
-                  <label>Квартира</label>
-                  <input type="text" />
-                </div>
-              </div>
-              <div class="content__input">
-                <label>Ориентир (код домофона)</label>
-                <input type="text" />
-              </div>
-              <div class="content__input">
-                <label>Комментарий к заказу</label>
-                <input type="text" />
+              <div class="content__select">
+                <select>
+                  <option value="08-00">08:00</option>
+                  <option value="11-30">11:30</option>
+                  <option value="13-00">13:00</option>
+                  <option value="15-30">15:30</option>
+                  <option value="17-00">17:00</option>
+                </select>
               </div>
             </div>
           </div>
-          <div class="content content--fixed"></div>
+          <div class="content__wrapper content__wrapper--marginTop">
+            <h5 class="content__title">Товары</h5>
+            <div class="content__group content__group--2x content__group--items">
+              <div class="item">
+                <p>Жевательная Резинка Toybox Shoocky Limon-Лимон 4 гр</p>
+                <span>1,000 сум <sub>1 шт</sub></span>
+              </div>
+              <hr color="#eee" />
+              <div class="item">
+                <p>Вода Hydrolife 0.33 л б/г</p>
+                <span>1,500 сум <sub>1 шт</sub></span>
+              </div>
+            </div>
+          </div>
+          <div class="content__wrapper content__wrapper--marginTop">
+            <h5 class="content__title">Что-то ещё?</h5>
+            <div class="content__featuredProducts">
+              <div class="featuredProduct">
+                <div>
+                  <img src="https://cdn.express24.uz/i/600/600/Z6RqdhTvmyj5zLJPUHYRe.jpg" alt="product" />
+                  <h5>Red Bull 0,35л.</h5>
+                </div>
+                <button type="button" class="storeBtn storeBtn__gray">
+                  23,000 сум
+                </button>
+              </div>
+              <div class="featuredProduct">
+                <div>
+                  <img src="https://cdn.express24.uz/i/600/600/Z6RqdhTvmyj5zLJPUHYRe.jpg" alt="product" />
+                  <h5>Red Bull 0,25л.</h5>
+                </div>
+                <button type="button" class="storeBtn storeBtn__gray">
+                  16,000 сум
+                </button>
+              </div>
+              <div class="featuredProduct">
+                <div>
+                  <img src="https://cdn.express24.uz/i/600/600/Z6RqdhTvmyj5zLJPUHYRe.jpg" alt="product" />
+                  <h5>Агуша фрукт. пюре груша 90гр (дойпак)</h5>
+                </div>
+                <button type="button" class="storeBtn storeBtn__gray">
+                  11,000 сум
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="content__wrapper content__wrapper--fixed">
+            <h5 class="content__title">Способ оплаты</h5>
+            <div class="content__select">
+              <select>
+                <option value="Mirabad" selected>Наличые</option>
+                <option value="Add">+ Добавить карту</option>
+              </select>
+            </div>
+            <div class="content__promocode">
+              <span><img src="assets/images/checkout.svg" alt="promocode" /></span>
+              <input type="text" placeholder="Введите промокод" id="promocodeInput">
+              <button type="button" class="storeBtn storeBtn__yellow disabled" id="promocodeBtn">Применить</button>
+            </div>
+            <h5 class="content__title">К оплате</h5>
+            <div class="content__group content__group--flex">
+              <div class="flex">
+                <p>Товары</p>
+                <span>2,500 сум</span>
+              </div>
+              <div class="flex">
+                <p>Доставка</p>
+                <span>17,800 сум</span>
+              </div>
+            </div>
+            <div class="content__group content__group--flex">
+              <div class="flex">
+                <h2>Итого</h2>
+                <h2>20,300 сум</h2>
+              </div>
+            </div>
+            <button type="button" class="storeBtn storeBtn__yellow content__btn">Заказать</button>
+          </div>
         </div>
       </div>
-
-      <!-- Footer -->
-
-      <footer>
-        <div class="footer-nav">
-          <a href="#">О нас</a>
-          <a href="#">Контакты</a>
-          <a href="#">Пользовательское соглашение</a>
-        </div>
-
-        <div class="footer-bottom d-flex align-items-center">
-          <p>Служба поддержки: +998 71 200 40 01</p>
-          <p>Ⓒ 2022 BucheT.uz</p>
-        </div>
-      </footer>
-
-      <!-- Footer End-->
     </div>
-    <script src="assets/scripts/checkout.js"></script>
-  </body>
+
+    <!-- Footer -->
+
+    <footer>
+      <div class="footer-nav">
+        <a href="#">О нас</a>
+        <a href="#">Контакты</a>
+        <a href="#">Пользовательское соглашение</a>
+      </div>
+
+      <div class="footer-bottom d-flex align-items-center">
+        <p>Служба поддержки: +998 71 200 40 01</p>
+        <p>Ⓒ 2022 BucheT.uz</p>
+      </div>
+    </footer>
+
+    <!-- Footer End-->
+  </div>
+  <script src="assets/scripts/checkout.js"></script>
+</body>
+
 </html>
