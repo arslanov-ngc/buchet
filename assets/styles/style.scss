@@ -594,6 +594,12 @@ footer {
       background-color: #e2e2e2;
     }
   }
+  &__block {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1.5rem;
+  }
 }
 
 .storeProducts {
@@ -976,7 +982,8 @@ footer {
   display: flex;
 }
 
-.checkout {
+.checkout,
+.userPanel {
   padding-left: 5rem;
   padding-right: 5rem;
   margin-top: 8rem;
@@ -990,6 +997,9 @@ footer {
     display: grid;
     grid-template-columns: 55% auto;
     gap: 5rem;
+    &--equal {
+      grid-template-columns: 50% auto;
+    }
     .content {
       position: relative;
       &__wrapper {
@@ -1012,8 +1022,8 @@ footer {
       }
       &__select {
         width: 100%;
-        height: 100%;
-        min-height: 3rem;
+        height: 3rem;
+        max-height: 3rem;
         background-color: rgb(238, 241, 241);
         border-radius: 0.8rem;
         display: flex;
@@ -1085,6 +1095,30 @@ footer {
             h2 {
               font-weight: 500;
             }
+          }
+        }
+        &--unique {
+          display: flex;
+          justify-content: space-between;
+          align-items: baseline;
+          button {
+            padding-top: 8px;
+            padding-bottom: 8px;
+          }
+        }
+        &--baseline {
+          align-items: baseline;
+        }
+        &--empty {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          padding-top: 3rem;
+          padding-bottom: 3rem;
+          p {
+            color: #999;
+            font-weight: 500;
           }
         }
       }
@@ -1228,6 +1262,67 @@ footer {
             border-radius: 0.2rem;
             background-color: rgb(177, 177, 177);
             backdrop-filter: blur(1px);
+          }
+        }
+      }
+      &__address {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        .address {
+          width: 100%;
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          border-bottom: 1px solid #eee;
+          h5 {
+            color: #222;
+            font-size: 1rem;
+            font-weight: normal;
+          }
+          p {
+            color: #999;
+            font-size: 0.8rem;
+            margin-top: 5px;
+          }
+        }
+      }
+      &__tabs {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .tab {
+          user-select: none;
+          padding: 1rem;
+          width: 100%;
+          border-radius: 1rem;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          font-size: 1rem;
+          font-weight: 500;
+          color: #999;
+          &--active {
+            background-color: #f6f6fb;
+            color: #555 !important;
+            font-weight: 600 !important;
+            &:hover {
+              background-color: #f6f6fb !important;
+            }
+          }
+          &--danger {
+            margin-top: 1rem;
+            background-color: #fff8f8;
+            &:hover {
+              background-color: #ff4040 !important;
+              color: #fff;
+            }
+          }
+          &:hover {
+            background-color: #f9f9fc;
           }
         }
       }

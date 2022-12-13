@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/styles/style.css" />
+  <title>Профиль</title>
+</head>
+
+<body>
+  <div class="app">
+    <!-- Navbar -->
+    <nav class="nav header">
+      <div class="header__logo">
+        <a href="/">
+          <img src="assets/images/logo.png" alt="logo" class="logo" />
+        </a>
+        <div class="header__languages">
+          <a href="#">
+            <img src="https://cdn-icons-png.flaticon.com/512/4628/4628645.png" alt="Ru" />
+            RU
+          </a>
+          <a href="#">
+            <img src="https://cdn-icons-png.flaticon.com/512/197/197416.png" alt="Uz" />
+            UZ
+          </a>
+        </div>
+      </div>
+      <div class="header__input">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input placeholder="Поиск" type="text" />
+        <button>Найти</button>
+      </div>
+      <div class="header__cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <a href="./checkout.html">Корзина</a>
+      </div>
+      <div class="header__profile">
+        <i class="fa-solid fa-user"></i>
+        <a href="#">Профиль</a>
+      </div>
+    </nav>
+
+    <!-- user panel -->
+
+    <div class="userPanel container">
+      <h3 class="checkout__title">Профиль</h3>
+      <div class="checkout__content checkout__content--equal">
+        <div class="content">
+          <div class="content__wrapper tabContentElement">
+            <h5 class="content__title">Мои данные</h5>
+            <div class="content__group content__group--2x content__group--items">
+              <div class="item">
+                <p>Бонусный счет</p>
+                <span><sub>0 баллов</sub></span>
+              </div>
+              <div class="item">
+                <p>+998999099999</p>
+                <button class="storeBtn storeBtn__gray storeBtn__deactive">Изменить</button>
+              </div>
+            </div>
+            <div class="content__input">
+              <input type="text" />
+              <label>Имя</label>
+            </div>
+            <div class="content__input">
+              <input type="text" />
+              <label>Фамилия</label>
+            </div>
+            <div class="content__group content__group--2x content__group--baseline">
+              <div class="content__input">
+                <input type="text" />
+                <label>Дата рождения</label>
+              </div>
+              <div class="content__select">
+                <select>
+                  <option value="undefined" disabled selected>Не выбран</option>
+                  <option value="male">Мужчина</option>
+                  <option value="female">Женшина</option>
+                </select>
+              </div>
+            </div>
+            <button type="button" class="storeBtn storeBtn__yellow storeBtn__block">Сохранить</button>
+          </div>
+          <div class="content__wrapper tabContentElement content__wrapper--marginTop">
+            <div class="content__group content__group--unique">
+              <h5 class="content__title">Платёжные карты</h5>
+              <button class="storeBtn storeBtn__gray storeBtn__deactive">+ Добавить карту</button>
+            </div>
+            <div class="content__group content__group--empty">
+              <img src="./assets/images/emptyCreditCard.svg" alt="empty">
+              <p>Вы не добавили платежную карту</p>
+            </div>
+          </div>
+          <div class="content__wrapper tabContentElement content__wrapper--marginTop">
+            <div class="content__group content__group--unique">
+              <h5 class="content__title">Мои адреса</h5>
+              <button class="storeBtn storeBtn__gray storeBtn__deactive">+ Добавить адрес</button>
+            </div>
+            <div class="content__address">
+              <div class="address">
+                <h5>Мирабад район, Амира Темура проспект</h5>
+              </div>
+              <div class="address">
+                <h5>Ташкент</h5>
+                <p>Мирабад район, Амира Темура проспект</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="content__wrapper tabParentElement content__tabs">
+            <div class="tab tabElement tab--active">
+              Мои данные
+            </div>
+            <div class="tab tabElement">
+              Платежные карты
+            </div>
+            <div class="tab tabElement">
+              Мои адреса
+            </div>
+            <div class="tab tab--danger">
+              Выход
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+
+    <footer>
+      <div class="footer-nav">
+        <a href="#">О нас</a>
+        <a href="#">Контакты</a>
+        <a href="#">Пользовательское соглашение</a>
+      </div>
+
+      <div class="footer-bottom d-flex align-items-center">
+        <p>Служба поддержки: +998 71 200 40 01</p>
+        <p>Ⓒ 2022 BucheT.uz</p>
+      </div>
+    </footer>
+
+    <!-- Footer End-->
+  </div>
+  <script src="assets/scripts/userPanel.js"></script>
+</body>
+
+</html>
