@@ -20,29 +20,36 @@
         <a href="/">
           <img src="assets/images/logo.png" alt="logo" class="logo" />
         </a>
-        <div class="header__languages">
-          <a href="#">
-            <img src="https://cdn-icons-png.flaticon.com/512/4628/4628645.png" alt="Ru" />
-            RU
-          </a>
-          <a href="#">
-            <img src="https://cdn-icons-png.flaticon.com/512/197/197416.png" alt="Uz" />
-            UZ
-          </a>
-        </div>
       </div>
       <div class="header__input">
         <i class="fa-solid fa-magnifying-glass"></i>
         <input placeholder="Поиск" type="text" />
         <button>Найти</button>
       </div>
-      <div class="header__cart">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <a href="./checkout.html">Корзина</a>
-      </div>
-      <div class="header__profile">
-        <i class="fa-solid fa-user"></i>
-        <a href="./userPanel.html">Профиль</a>
+
+      <div class="header__navbar navbar">
+        <div class="navbar__content deactive">
+          <div class="header__languages">
+            <a href="#">
+              <img src="https://cdn-icons-png.flaticon.com/512/4628/4628645.png" alt="Ru" />
+              RU
+            </a>
+            <a href="#">
+              <img src="https://cdn-icons-png.flaticon.com/512/197/197416.png" alt="Uz" />
+              UZ
+            </a>
+          </div>
+          <div class="header__cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <a href="./checkout.html">Корзина</a>
+          </div>
+          <div class="header__profile">
+            <i class="fa-solid fa-user"></i>
+            <a href="./userPanel.html">Профиль</a>
+          </div>
+          <span class="navbar__CloseBtn navbarBtn deactive"><i class="fa-solid fa-times"></i></span>
+        </div>
+        <span class="navbar__MenuBtn navbarBtn active"><i class="fa-solid fa-bars"></i></span>
       </div>
     </nav>
     <div class="notFound">
@@ -68,6 +75,7 @@
     </footer>
 
     <!-- Footer End-->
+    <script src="./assets/scripts/error.js"></script>
 </body>
 
 </html>
