@@ -788,36 +788,13 @@ footer .footer-bottom {
   padding: 1rem;
   text-align: right;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-}
-.productModal__footer h6 {
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-.productModal__footer .btnGroup {
-  margin-top: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.productModal__footer .btnGroup div {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.productModal__footer .btnGroup div button {
-  border: none;
-  outline: none;
-  padding: 1rem 1.6rem;
-  background-color: #eee;
-  border-radius: 0.5rem;
-  transition: 0.2s ease-in-out;
-}
-.productModal__footer .btnGroup div button:hover {
-  background-color: #e0e0e0;
-}
-.productModal__footer .btnGroup div button.deactive {
-  pointer-events: none;
-  opacity: 0.6;
+.productModal__footer h6 {
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .productModal.active {
@@ -974,8 +951,8 @@ footer .footer-bottom {
 
 .checkout,
 .userPanel {
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
   margin-top: 8rem;
 }
 .checkout__title,
@@ -989,7 +966,7 @@ footer .footer-bottom {
   width: 100%;
   display: grid;
   grid-template-columns: 55% auto;
-  gap: 5rem;
+  gap: 5%;
 }
 .checkout__content--equal,
 .userPanel__content--equal {
@@ -1544,7 +1521,10 @@ footer .footer-bottom {
   }
   .checkout,
 .userPanel {
+    padding-left: 4rem;
+    padding-right: 4rem;
     margin-top: 4rem;
+    margin-bottom: 8rem;
   }
   .checkout__title,
 .userPanel__title {

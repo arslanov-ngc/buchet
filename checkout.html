@@ -28,17 +28,18 @@
         <i class="fa-solid fa-angle-left"></i> Магазин
       </a>
       <h3 class="checkout__title">The Loaf</h3>
+      <div id="yandexMap" style="width: 600px; height: 400px"></div>
       <div class="checkout__content">
         <div class="content">
           <div class="content__wrapper">
             <h5 class="content__title">Адрес доставки</h5>
             <div class="content__select">
               <i class="fa-solid fa-location-dot"></i>
-              <select>
+              <select id="mapSelect">
                 <option value="Mirabad" selected>
-                  Мирабад район, Амира Темура проспект
+                  Адрес не выбран
                 </option>
-                <option value="Add">Добавить</option>
+                <option value="add">Добавить</option>
               </select>
             </div>
             <div class="content__group content__group--3x">
@@ -101,7 +102,7 @@
           <div class="content__wrapper content__wrapper--marginTop">
             <h5 class="content__title">Что-то ещё?</h5>
             <div class="content__featuredProducts">
-              <div class="featuredProduct">
+              <div class="featuredProduct product__modal__opener">
                 <div>
                   <img src="https://cdn.express24.uz/i/600/600/Z6RqdhTvmyj5zLJPUHYRe.jpg" alt="product" />
                   <h5>Red Bull 0,35л.</h5>
@@ -110,7 +111,7 @@
                   23,000 сум
                 </button>
               </div>
-              <div class="featuredProduct">
+              <div class="featuredProduct product__modal__opener">
                 <div>
                   <img src="https://cdn.express24.uz/i/600/600/Z6RqdhTvmyj5zLJPUHYRe.jpg" alt="product" />
                   <h5>Red Bull 0,25л.</h5>
@@ -119,7 +120,7 @@
                   16,000 сум
                 </button>
               </div>
-              <div class="featuredProduct">
+              <div class="featuredProduct product__modal__opener">
                 <div>
                   <img src="https://cdn.express24.uz/i/600/600/Z6RqdhTvmyj5zLJPUHYRe.jpg" alt="product" />
                   <h5>Агуша фрукт. пюре груша 90гр (дойпак)</h5>
@@ -139,6 +140,20 @@
                 <option value="Mirabad" selected>Наличые</option>
                 <option value="Add">+ Добавить карту</option>
               </select>
+            </div>
+            <div class="content__input">
+              <input type="text" maxlength="16" />
+              <label>Номер карты</label>
+            </div>
+            <div class="content__group content__group--2x">
+              <div class="content__input">
+                <input type="text" maxlength="5" />
+                <label>Срок действия карты</label>
+              </div>
+              <div class="content__input">
+                <input type="text" />
+                <label>Имя</label>
+              </div>
             </div>
             <div class="content__promocode">
               <span><img src="assets/images/checkout.svg" alt="promocode" /></span>
@@ -185,6 +200,33 @@
 
     <!-- Footer End-->
   </div>
+
+  <!-- product modal -->
+
+  <div class="productModal deactive">
+    <div class="productModal__wrapper">
+      <span class="productModal__close">
+        <i class="fa-solid fa-times"></i>
+      </span>
+      <div class="productModal__header">
+        <img src="https://cdn.express24.uz/i/600/600/Z6RqdhTvmyj5zLJPUHYRe.jpg" title="img" />
+      </div>
+      <div class="productModal__content">
+        <h3>Red Bull 0,35л.</h3>
+        <p>Энергетик Red Bull Original</p>
+      </div>
+      <div class="productModal__footer">
+        <h6>23,000 сум</h6>
+        <button type="button" class="storeBtn storeBtn__yellow contact__modal__opener">
+          Добавить
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=52952374-807e-4baf-bd26-d8ae34eb6cde&lang=ru_RU"
+    type="text/javascript">
+    </script>
   <script src="assets/scripts/checkout.js"></script>
 </body>
 

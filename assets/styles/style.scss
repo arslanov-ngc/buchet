@@ -821,35 +821,12 @@ footer {
     padding: 1rem;
     text-align: right;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     h6 {
       font-size: 0.9rem;
       font-weight: 600;
-    }
-    .btnGroup {
-      margin-top: 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      div {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        button {
-          border: none;
-          outline: none;
-          padding: 1rem 1.6rem;
-          background-color: #eee;
-          border-radius: 0.5rem;
-          transition: 0.2s ease-in-out;
-          &:hover {
-            background-color: #e0e0e0;
-          }
-        }
-        button.deactive {
-          pointer-events: none;
-          opacity: 0.6;
-        }
-      }
     }
   }
 }
@@ -1008,8 +985,8 @@ footer {
 
 .checkout,
 .userPanel {
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
   margin-top: 8rem;
   &__title {
     font-size: 3rem;
@@ -1020,7 +997,7 @@ footer {
     width: 100%;
     display: grid;
     grid-template-columns: 55% auto;
-    gap: 5rem;
+    gap: 5%;
     &--equal {
       grid-template-columns: 50% auto;
     }
@@ -1518,7 +1495,10 @@ footer {
   }
   .checkout,
   .userPanel {
+    padding-left: 4rem;
+    padding-right: 4rem;
     margin-top: 4rem;
+    margin-bottom: 8rem;
     &__title {
       margin-top: 4rem;
       margin-bottom: 3rem;
