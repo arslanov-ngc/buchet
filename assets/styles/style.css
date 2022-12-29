@@ -999,6 +999,17 @@ footer .footer-bottom {
   font-weight: 600;
   margin-bottom: 1.5rem;
 }
+.checkout__content .content__map,
+.userPanel__content .content__map {
+  width: 100%;
+  height: 15rem;
+  max-height: 20rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  background-color: #eee;
+  overflow: hidden;
+}
 .checkout__content .content__select,
 .userPanel__content .content__select {
   width: 100%;

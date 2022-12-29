@@ -1021,6 +1021,16 @@ footer {
         font-weight: 600;
         margin-bottom: 1.5rem;
       }
+      &__map {
+        width: 100%;
+        height: 15rem;
+        max-height: 20rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 1rem;
+        background-color: #eee;
+        overflow: hidden;
+      }
       &__select {
         width: 100%;
         height: 3rem;
