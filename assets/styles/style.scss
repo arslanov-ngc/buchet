@@ -392,7 +392,7 @@ a {
           font-size: 23px;
           font-weight: 600;
         }
-        .storeBtn {
+        .defaultBtn {
           width: 100%;
         }
       }
@@ -575,7 +575,7 @@ footer {
   }
 }
 
-.storeBtn {
+.defaultBtn {
   border: none;
   outline: none;
   padding: 0.8rem 1rem;
@@ -890,7 +890,9 @@ footer {
   }
 }
 
-.contactModal {
+.contactModal,
+.userCardModal,
+.userAddressModal {
   position: fixed;
   top: 0;
   left: 0;
@@ -948,6 +950,9 @@ footer {
   &__content {
     margin-top: 2rem;
     margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     input {
       width: 100%;
       padding: 1rem;
@@ -976,10 +981,14 @@ footer {
     }
   }
 }
-.contactModal.active {
+.contactModal.active,
+.userCardModal.active,
+.userAddressModal.active {
   display: flex;
 }
-.contactModal.deactive {
+.contactModal.deactive,
+.userCardModal.deactive,
+.userAddressModal.deactive {
   display: none;
 }
 
@@ -1093,6 +1102,14 @@ footer {
               font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
                 "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
             }
+            #phone {
+              outline: none;
+              padding: 4px;
+              border-radius: 3px;
+            }
+            #phone.active {
+              border: 1px solid #ccc;
+            }
           }
         }
         &--flex {
@@ -1127,10 +1144,71 @@ footer {
           flex-direction: column;
           padding-top: 3rem;
           padding-bottom: 3rem;
+          img {
+            width: 100%;
+            max-width: 12rem;
+          }
           p {
             color: #999;
             font-weight: 500;
           }
+        }
+        &--list {
+          margin-top: 1rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          overflow-y: scroll;
+          max-height: 14rem;
+          gap: 1.5rem;
+          .card {
+            width: 100%;
+            padding-left: 0.8rem;
+            padding-right: 0.8rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            span {
+              display: inline-flex;
+              align-items: center;
+              gap: 10px;
+              p {
+                font-size: 1rem;
+                font-weight: 500;
+              }
+            }
+            img {
+              max-width: 2rem;
+              border-radius: 0.2rem;
+            }
+            i {
+              color: #aaa;
+              cursor: pointer;
+              transition: all 0.2s ease;
+            }
+            i:hover {
+              color: #999;
+            }
+          }
+        }
+        &--list::-webkit-scrollbar {
+          width: 5px;
+          height: auto;
+        }
+
+        &--list::-webkit-scrollbar-track {
+          background: #f1f1f1;
+        }
+
+        /* Handle */
+        &--list::-webkit-scrollbar-thumb {
+          background: #aaa;
+        }
+
+        /* Handle on hover */
+        &--list::-webkit-scrollbar-thumb:hover {
+          background: #999;
         }
       }
       &__input {
@@ -1277,14 +1355,18 @@ footer {
         }
       }
       &__address {
-        width: 100%;
+        margin-top: 1rem;
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
         overflow-y: scroll;
+        max-height: 14rem;
+        gap: 1rem;
         .address {
           width: 100%;
-          padding-top: 1rem;
-          padding-bottom: 1rem;
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
@@ -1301,6 +1383,22 @@ footer {
           }
         }
       }
+      &__address::-webkit-scrollbar {
+        width: 5px;
+        height: auto;
+      }
+
+      &__address::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      &__address::-webkit-scrollbar-thumb {
+        background: #aaa;
+      }
+
+      &__address::-webkit-scrollbar-thumb:hover {
+        background: #999;
+      }
       &__tabs {
         width: 100%;
         display: flex;
@@ -1310,7 +1408,7 @@ footer {
           user-select: none;
           padding: 1rem;
           width: 100%;
-          border-radius: 1rem;
+          border-radius: 0.8rem;
           cursor: pointer;
           transition: all 0.3s ease;
           font-size: 1rem;
@@ -1515,6 +1613,7 @@ footer {
     }
     &__content {
       grid-template-columns: 100%;
+      gap: 1rem;
     }
   }
 }
@@ -1549,6 +1648,12 @@ footer {
         }
       }
     }
+  }
+  .contactModal,
+  .userCardModal,
+  .userAddressModal {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 

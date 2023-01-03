@@ -67,8 +67,8 @@
                 <span><sub>0 баллов</sub></span>
               </div>
               <div class="item">
-                <p>+998999099999</p>
-                <button class="storeBtn storeBtn__gray storeBtn__deactive">Изменить</button>
+                <div>+<code id="phone">998999099999</code></div>
+                <button class="defaultBtn defaultBtn__gray defaultBtn__deactive" id="editPhoneBtn">Изменить</button>
               </div>
             </div>
             <div class="content__input">
@@ -92,30 +92,35 @@
                 </select>
               </div>
             </div>
-            <button type="button" class="storeBtn storeBtn__yellow storeBtn__block">Сохранить</button>
+            <button type="button" class="defaultBtn defaultBtn__yellow defaultBtn__block">Сохранить</button>
           </div>
-          <div class="content__wrapper tabContentElement content__wrapper--marginTop">
+          <div class="content__wrapper tabContentElement">
             <div class="content__group content__group--unique">
               <h5 class="content__title">Платёжные карты</h5>
-              <button class="storeBtn storeBtn__gray storeBtn__deactive">+ Добавить карту</button>
+              <button class="defaultBtn defaultBtn__gray defaultBtn__deactive" id="userCardModalOpen">+ Добавить
+                карту</button>
             </div>
-            <div class="content__group content__group--empty">
-              <img src="./assets/images/emptyCreditCard.svg" alt="empty">
-              <p>Вы не добавили платежную карту</p>
+            <div class="content__group">
+              <div class="content__group--empty" id="emptyUserCard">
+                <img src="./assets/images/emptyCreditCard.svg" alt="empty">
+                <p>Вы не добавили платежную карту</p>
+              </div>
+              <div class="content__group--list" id="userCardWrapper">
+              </div>
             </div>
           </div>
-          <div class="content__wrapper tabContentElement content__wrapper--marginTop">
+          <div class="content__wrapper tabContentElement">
             <div class="content__group content__group--unique">
               <h5 class="content__title">Мои адреса</h5>
-              <button class="storeBtn storeBtn__gray storeBtn__deactive">+ Добавить адрес</button>
+              <button class="defaultBtn defaultBtn__gray defaultBtn__deactive" id="addressModalOpener">+ Добавить
+                адрес</button>
             </div>
-            <div class="content__address">
-              <div class="address">
-                <h5>Мирабад район, Амира Темура проспект</h5>
+            <div class="content__group">
+              <div class="content__group--empty" id="emptyUserAddress">
+                <img src="./assets/images/emptyAddress.svg" alt="empty">
+                <p>Вы не добавили aдрес</p>
               </div>
-              <div class="address">
-                <h5>Ташкент</h5>
-                <p>Мирабад район, Амира Темура проспект</p>
+              <div class="content__address" id="userAddressWrapper">
               </div>
             </div>
           </div>
@@ -155,6 +160,52 @@
     </footer>
 
     <!-- Footer End-->
+  </div>
+
+  <!-- user card modal -->
+
+  <div class="userCardModal deactive">
+    <div class="userCardModal__wrapper">
+      <span class="userCardModal__close">
+        <i class="fa-solid fa-times"></i>
+      </span>
+      <div class="userCardModal__header">
+        <h3>Добавить платёжные карты</h3>
+      </div>
+      <div class="userCardModal__content">
+        <input type="text" maxlength="16" placeholder="Номер карты" id="cardNumber" />
+        <input type="text" maxlength="5" placeholder="Срок действия карты" id="cardDate" />
+      </div>
+      <div class="userCardModal__footer">
+        <button type="button" class="defaultBtn defaultBtn__yellow">
+          Продолжить
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- user address modal -->
+
+  <div class="userAddressModal deactive">
+    <div class="userAddressModal__wrapper">
+      <span class="userAddressModal__close">
+        <i class="fa-solid fa-times"></i>
+      </span>
+      <div class="userAddressModal__header">
+        <h3>Добавить платёжные карты</h3>
+      </div>
+      <div class="userAddressModal__content">
+        <input type="text" placeholder="Город" id="cityInp" />
+        <input type="text" placeholder="Область" id="areaInp" />
+        <input type="text" placeholder="Улица" id="streetInp" />
+        <input type="text" placeholder="Номер дома" id="num_houseInp" />
+      </div>
+      <div class="userAddressModal__footer">
+        <button type="button" class="defaultBtn defaultBtn__yellow">
+          Продолжить
+        </button>
+      </div>
+    </div>
   </div>
   <script src="assets/scripts/userPanel.js"></script>
 </body>
